@@ -34,7 +34,7 @@ function doRandom(min, max) {
 
   return (
     <div className="App">
-      <h2>Random Story-Generating Radomizer for Stories</h2>
+      <h2>Random Story-Generating Randomizer for Stories</h2>
       <button onClick={()=>doGenre()}>Genre</button>
       <button onClick={()=>doTheme()}>Theme</button>
       <button onClick={()=>doCharacter()}>Character</button>
