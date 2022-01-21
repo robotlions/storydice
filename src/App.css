@@ -1,15 +1,27 @@
 .bannerImg{
-  position: relative;
   top: 0px;
   width: 100vw;
-  height: 300px;
 }
 
 .buttonRow Button{
   margin: 10px;
+  background-color: #040052;
+  opacity: 0.8;
+}
+
+.allButtonRow Button{
+  margin: 10px;
+  background-color: #040052;
+  opacity: 0.8;
+
 }
 
 .container{
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container-fluid{
   text-align: center;
   min-height: 100vh;
 }
@@ -18,8 +30,8 @@
   font-size: small;
   color: gray;
   position: absolute;
-  bottom: 5px;
-  width: 90%
+  width: 100%;
+  opacity: 0.4;
 }
 
 h2{

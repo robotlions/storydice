@@ -35,7 +35,7 @@ function doRandom(min, max) {
   }
 
   return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
         <img className="bannerImg" src={bannerImg}></img>
         </div>
@@ -47,10 +47,14 @@ function doRandom(min, max) {
       <Button onClick={()=>doTheme()}>Theme</Button>
       <Button onClick={()=>doCharacter()}>Character</Button>
       </div>
+      <div className="allButtonRow">
+        <Button onClick={()=>{doGenre();doTheme();doCharacter()}}>Generate All</Button>
+      </div>
       <br/>
       <p className="headingName">Genre: <span className="generatedString">{generatedGenre}</span></p>
       <p className="headingName">Theme: <span className="generatedString">{generatedTheme}</span></p>
       <p className="headingName">Character: <span className="generatedString">{generatedCharacter}</span></p>
+<br/>
 <br/>
 <br/>
 <div className="creditsRow">
