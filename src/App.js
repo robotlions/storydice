@@ -4,6 +4,7 @@ import {genreList} from './genres';
 import {themeList} from './themes';
 import {characterList} from './characters';
 import {Button, Container} from 'react-bootstrap';
+import bannerImg from './diceV3Banner.jpg';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -35,7 +36,10 @@ function doRandom(min, max) {
 
   return (
       <div className="container">
-      <div className="row header">
+        <div className="row">
+        <img className="bannerImg" src={bannerImg}></img>
+        </div>
+        <div className="headlineText">
       <h2>Random Story-Generating Randomizer for Stories</h2>
       </div>
       <div className="buttonRow">
