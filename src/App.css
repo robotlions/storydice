@@ -1,6 +1,30 @@
-.App {
-  font-family: 'Gotham Light', sans-serif;
+
+
+.buttonRow Button{
+  margin: 10px;
+}
+
+.container{
+  padding-top: 100px;
   text-align: center;
+  background-color: lightgray;
+  min-height: 100vh;
+}
+
+.creditsRow{
+  font-size: small;
+  color: gray;
+  position: absolute;
+  bottom: 5px;
+  width: 90%
+}
+
+h2{
+  font-family: 'Gotham Black';
+}
+
+.header{
+  margin-bottom: 50px;
 }
 
 .headingName{
@@ -13,6 +37,7 @@
   font-weight: normal;
   font-size: large;
 }
+
 
 @font-face {
   font-family: 'Gotham Light';
