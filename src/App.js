@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
 import react from 'react';
+import {genreList} from './genres';
+import {themeList} from './themes';
+import {characterList} from './characters';
 
 function App() {
 
@@ -11,16 +14,23 @@ const [generatedCharacter, setGeneratedCharacter] = useState(null);
 
 
 function doGenre() {
-    setGeneratedGenre("New Genre")
+  const newGenre = genreList[doRandom(0, genreList.length)]
+    setGeneratedGenre(newGenre)
   };
 
 function doTheme() {
-    setGeneratedTheme("New Theme")
-  };
+  const newTheme = themeList[doRandom(0, themeList.length)]
+  setGeneratedTheme(newTheme)
+};
 
 function doCharacter() {
-    setGeneratedCharacter("New Character")
-  };
+  const newCharacter = characterList[doRandom(0, characterList.length)]
+  setGeneratedCharacter(newCharacter)
+};
+
+function doRandom(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
   return (
     <div className="App">

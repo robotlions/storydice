@@ -1,13 +1,24 @@
 .App {
+  font-family: 'Gotham Light', sans-serif;
   text-align: center;
 }
 
 .headingName{
-  font-weight: bold;
+  font-family: 'Gotham Black', sans-serif;
   font-size: large;
 }
 
 .generatedString{
+  font-family: 'Gotham Light', sans-serif;
   font-weight: normal;
   font-size: large;
+}
+
+@font-face {
+  font-family: 'Gotham Light';
+  src: url('../src/fonts/GothamPro-Light.woff');
+}
+@font-face {
+  font-family: 'Gotham Black';
+  src: url('../src/fonts/GothamPro-Black.woff');
 }
