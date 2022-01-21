@@ -29,9 +29,10 @@ function doCharacter() {
       <button onClick={()=>doTheme()}>Theme</button>
       <button onClick={()=>doCharacter()}>Character</button>
       <br/>
-      Genre: {generatedGenre}<br/>
-      Theme: {generatedTheme}<br/>
-      Character: {generatedCharacter}<br/>
+      <p className="headingName">Genre: <span className="generatedString">{generatedGenre}</span></p>
+      <p className="headingName">Theme: <span className="generatedString">{generatedTheme}</span></p>
+      <p className="headingName">Character: <span className="generatedString">{generatedCharacter}</span></p>
+
     </div>
   );
 }
