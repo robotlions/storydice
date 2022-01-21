@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {genreList} from './genres';
 import {themeList} from './themes';
 import {characterList} from './characters';
+import {wordCounts} from './wordcounts';
 import {Button, Container} from 'react-bootstrap';
 import bannerImg from './diceV3Banner.jpg';
 
@@ -13,6 +14,7 @@ function App() {
 const [generatedGenre, setGeneratedGenre] = useState(null);
 const [generatedTheme, setGeneratedTheme] = useState(null);
 const [generatedCharacter, setGeneratedCharacter] = useState(null);
+const [generatedWordCount, setGeneratedWordCount] = useState(null);
 
 
 function doGenre() {
@@ -28,6 +30,11 @@ function doTheme() {
 function doCharacter() {
   const newCharacter = characterList[doRandom(0, characterList.length)]
   setGeneratedCharacter(newCharacter)
+};
+
+function doWordCount() {
+  const newWordCount = wordCounts[doRandom(0, wordCounts.length)]
+  setGeneratedWordCount(newWordCount)
 };
 
 function doRandom(min, max) {
@@ -46,14 +53,17 @@ function doRandom(min, max) {
       <Button onClick={()=>doGenre()}>Genre</Button>
       <Button onClick={()=>doTheme()}>Theme</Button>
       <Button onClick={()=>doCharacter()}>Character</Button>
+      <Button onClick={()=>doWordCount()}>Word Count</Button>
       </div>
       <div className="allButtonRow">
-        <Button onClick={()=>{doGenre();doTheme();doCharacter()}}>Generate All</Button>
+        <Button onClick={()=>{doGenre();doTheme();doCharacter();doWordCount()}}>Generate All</Button>
       </div>
       <br/>
       <p className="headingName">Genre: <span className="generatedString">{generatedGenre}</span></p>
       <p className="headingName">Theme: <span className="generatedString">{generatedTheme}</span></p>
       <p className="headingName">Character: <span className="generatedString">{generatedCharacter}</span></p>
+      <p className="headingName">Word Count: <span className="generatedString">{generatedWordCount}</span></p>
+
 <br/>
 <br/>
 <br/>
