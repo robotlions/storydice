@@ -6,6 +6,8 @@ import { characterList } from "./characters";
 import { wordCounts } from "./wordcounts";
 import { Button } from "react-bootstrap";
 import bannerImg from "./diceV3Banner.jpg";
+import bannerImg2 from "./diceV3Banner2.jpg";
+
 import { motion, AnimatePresence } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -45,7 +47,7 @@ function App() {
         <div className="row">
           <img
             className="bannerImg"
-            src={bannerImg}
+            src={bannerImg2}
             alt="black and white dice"
           ></img>
         </div>

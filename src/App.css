@@ -13,19 +13,26 @@
 
 .buttonRow Button{
   margin: 10px;
-  background-color: #040052;
-  opacity: 0.8;
+  background-color: #43468F;
+  
 }
 
 .allButtonRow Button{
   margin: 10px;
-  background-color: #040052;
-  opacity: 0.8;
+  background-color: #43468F;
+  
 
 }
 .card{
   min-height:100px;
 }
+
+Button{
+  font-family: "Gotham Black", sans-serif !important;
+  border-radius: 3px !important;
+  border-color: white !important;
+}
+
 
 @media (min-width: 575px){
   .card{
@@ -38,8 +45,9 @@
 
 
 .card-title{
-  padding-top: 20px;
-  background-color: lightgray;
+  padding-top: 15px;
+  padding-bottom:10px;
+  background-color: #4D7BD1;
 }
 
 .container{
@@ -77,8 +85,8 @@ h2{
 
 .generatedString{
   font-family: 'Gotham Light', sans-serif;
-  font-weight: normal;
-  font-size: large;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 @keyframes slideIn {
