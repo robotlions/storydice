@@ -67,12 +67,14 @@ function App() {
   return (
     <motion.div>
       <div className="container-fluid g-md-5">
-        <div className="row">
+        <div className="row navbar sticky-top">
+        
           <img
             className="bannerImg"
             src={bannerImg2}
             alt="black and white dice"
           ></img>
+          
         </div>
         <div className="headlineText">
           <h2>Random Story-Generating Randomizer for Stories</h2>
