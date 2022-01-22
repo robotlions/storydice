@@ -5,7 +5,6 @@ import { themeList } from "./themes";
 import { characterList } from "./characters";
 import { wordCounts } from "./wordcounts";
 import { Button } from "react-bootstrap";
-import bannerImg from "./diceV3Banner.jpg";
 import bannerImg2 from "./diceV3Banner2.jpg";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,23 +18,47 @@ function App() {
 
   function doGenre() {
     const newGenre = genreList[doRandom(0, genreList.length)];
-    setGeneratedGenre(newGenre);
+    if (generatedGenre != null){
+    setGeneratedGenre(null);
+    setTimeout(()=>{setGeneratedGenre(newGenre)},300);
+    }
+    else{
+      setGeneratedGenre(newGenre)
+    }
   }
 
   function doTheme() {
     const newTheme = themeList[doRandom(0, themeList.length)];
+    if (generatedTheme != null){
+      setGeneratedTheme(null);
+      setTimeout(()=>{setGeneratedTheme(newTheme)},300);
+    }
+    else{
     setGeneratedTheme(newTheme);
   }
+}
 
   function doCharacter() {
     const newCharacter = characterList[doRandom(0, characterList.length)];
+    if (generatedCharacter != null){
+      setGeneratedCharacter(null);
+      setTimeout(()=>{setGeneratedCharacter(newCharacter)},300);
+    }
+    else{
     setGeneratedCharacter(newCharacter);
   }
+}
 
   function doWordCount() {
     const newWordCount = wordCounts[doRandom(0, wordCounts.length)];
+    if (generatedWordCount != null){
+      setGeneratedWordCount(null);
+      setTimeout(()=>{setGeneratedWordCount(newWordCount)},300);
+    }
+    else{
     setGeneratedWordCount(newWordCount);
   }
+}
 
   function doRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -43,7 +66,7 @@ function App() {
 
   return (
     <motion.div>
-      <div className="container-fluid">
+      <div className="container-fluid g-md-5">
         <div className="row">
           <img
             className="bannerImg"
@@ -82,16 +105,16 @@ function App() {
                 setGeneratedWordCount(null);
               }}
             >
-              Reset All
+              Clear All
             </Button>
           </p>
         </div>
         <br />
         <AnimatePresence>
           <div className="row">
-            <div className="col-sm-3">
+            <div className="col-md-3">
               <div className="card">
-                  <p className="headingName card-title">
+                  <p onClick={()=>doGenre()} className="headingName card-title">
                     Genre:</p>
                     <p className="card-text generatedString">
                     {generatedGenre && (
@@ -118,10 +141,10 @@ function App() {
                 
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-md-3">
               <div className="card">
                 
-                  <p className="headingName card-title">
+                  <p onClick={()=>doTheme()} className="headingName card-title">
                     Theme:
                     </p>
                     <p className="card-text generatedString">
@@ -150,10 +173,10 @@ function App() {
               </div>
             </div>
 
-            <div className="col-sm-3">
+            <div className="col-md-3">
               <div className="card">
                 
-                  <p className="card-title headingName">
+                  <p onClick={()=>doCharacter()} className="card-title headingName">
                     Character:
                     </p>
                     <p className="generatedString">
@@ -182,10 +205,10 @@ function App() {
               </div>
             </div>
 
-            <div className="col-sm-3">
+            <div className="col-md-3">
               <div className="card">
                 
-                  <p className="card-title headingName">
+                  <p onClick={()=>doWordCount()} className="card-title headingName">
                     Word Count:
                     </p>
                     <p className="card-text generatedString">

@@ -11,18 +11,6 @@
   }
 }
 
-.buttonRow Button{
-  margin: 10px;
-  background-color: #43468F;
-  
-}
-
-.allButtonRow Button{
-  margin: 10px;
-  background-color: #43468F;
-  
-
-}
 .card{
   min-height:100px;
 }
@@ -31,17 +19,10 @@ Button{
   font-family: "Gotham Black", sans-serif !important;
   border-radius: 3px !important;
   border-color: white !important;
+  margin: 10px ! important;
+  background-color: #43468F !important;
 }
 
-
-@media (min-width: 575px){
-  .card{
-    min-height: 200px;
-  }
-  .generatedString{
-    margin-top: 30px;
-  }
-}
 
 
 .card-title{
@@ -61,7 +42,7 @@ Button{
 }
 
 .creditsRow{
-  font-size: small;
+  font-size: x-small;
   color: gray;
   position: absolute;
   opacity: 0.4;
@@ -86,7 +67,7 @@ h2{
 .generatedString{
   font-family: 'Gotham Light', sans-serif;
   font-weight: bold;
-  font-size: x-large;
+  font-size: large;
 }
 
 @keyframes slideIn {
@@ -101,4 +82,13 @@ h2{
 @font-face {
   font-family: 'Gotham Black';
   src: url('../src/fonts/GothamPro-Black.woff');
+}
+@media (min-width: 775px){
+  .card{
+    min-height: 300px;
+  }
+  .generatedString{
+    margin-top: 30px;
+    font-size: x-large;
+  }
 }
