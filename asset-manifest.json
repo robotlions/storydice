@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/storydice/static/css/main.44c18e8b.css",
-    "main.js": "/storydice/static/js/main.ab975c67.js",
+    "main.css": "/storydice/static/css/main.44a76292.css",
+    "main.js": "/storydice/static/js/main.851acad0.js",
     "static/js/787.2e111930.chunk.js": "/storydice/static/js/787.2e111930.chunk.js",
     "static/media/diceV3Banner2.jpg": "/storydice/static/media/diceV3Banner2.d2251f1016723a07407d.jpg",
-    "static/media/diceV3Banner.jpg": "/storydice/static/media/diceV3Banner.c41b012877bc35d062c5.jpg",
     "static/media/GothamPro-Black.woff": "/storydice/static/media/GothamPro-Black.84f14561ba6eb9228833.woff",
     "static/media/GothamPro-Light.woff": "/storydice/static/media/GothamPro-Light.3601bb3070ccd165f3af.woff",
     "index.html": "/storydice/index.html",
-    "main.44c18e8b.css.map": "/storydice/static/css/main.44c18e8b.css.map",
-    "main.ab975c67.js.map": "/storydice/static/js/main.ab975c67.js.map",
+    "main.44a76292.css.map": "/storydice/static/css/main.44a76292.css.map",
+    "main.851acad0.js.map": "/storydice/static/js/main.851acad0.js.map",
     "787.2e111930.chunk.js.map": "/storydice/static/js/787.2e111930.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44c18e8b.css",
-    "static/js/main.ab975c67.js"
+    "static/css/main.44a76292.css",
+    "static/js/main.851acad0.js"
   ]
 }
