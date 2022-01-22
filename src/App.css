@@ -59,7 +59,7 @@ h2{
 .headlineText{
   margin-top: 20px;
   margin-bottom: 30px;
-  animation: slideIn 2s;
+  animation: riseIn 2s;
 }
 
 .headingName{
@@ -75,7 +75,12 @@ h2{
 
 
 @keyframes slideIn {
-  from {opacity: 0; transform: translateY(-200px);}
+  from {opacity: 0; transform: translateX(300px);}
+  to {opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes riseIn {
+  from {opacity: 0; transform: translateY(200px);}
   to {opacity: 1; transform: translateY(0px);}
 }
 
@@ -94,5 +99,8 @@ h2{
   .generatedString{
     margin-top: 30px;
     font-size: x-large;
+  }
+  .headlineText{
+    animation: slideIn 2s;
   }
 }

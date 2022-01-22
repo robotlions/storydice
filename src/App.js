@@ -67,7 +67,7 @@ function App() {
   return (
     <motion.div>
       <div className="container-fluid g-md-5">
-        <div className="row navbar sticky-top">
+        <div className="row navbar">
         
           <img
             className="bannerImg"
