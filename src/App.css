@@ -3,6 +3,14 @@
   width: 100vw;
 }
 
+@media (max-width: 575px){
+  .bannerImg{
+    height:200px;
+    object-fit: cover;
+    object-position: left;
+  }
+}
+
 .buttonRow Button{
   margin: 10px;
   background-color: #040052;
@@ -14,6 +22,24 @@
   background-color: #040052;
   opacity: 0.8;
 
+}
+.card{
+  min-height:100px;
+}
+
+@media (min-width: 575px){
+  .card{
+    min-height: 200px;
+  }
+  .generatedString{
+    margin-top: 30px;
+  }
+}
+
+
+.card-title{
+  padding-top: 20px;
+  background-color: lightgray;
 }
 
 .container{
@@ -30,8 +56,8 @@
   font-size: small;
   color: gray;
   position: absolute;
-  width: 100%;
   opacity: 0.4;
+  width: 100%;
 }
 
 h2{
@@ -41,6 +67,7 @@ h2{
 .headlineText{
   margin-top: 50px;
   margin-bottom: 50px;
+  animation: slideIn 2s;
 }
 
 .headingName{
@@ -54,6 +81,10 @@ h2{
   font-size: large;
 }
 
+@keyframes slideIn {
+  from {opacity: 0; transform: translateX(500px);}
+  to {opacity: 1; transform: translateX(0px);}
+}
 
 @font-face {
   font-family: 'Gotham Light';
