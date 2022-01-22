@@ -18,47 +18,51 @@ function App() {
 
   function doGenre() {
     const newGenre = genreList[doRandom(0, genreList.length)];
-    if (generatedGenre != null){
-    setGeneratedGenre(null);
-    setTimeout(()=>{setGeneratedGenre(newGenre)},300);
-    }
-    else{
-      setGeneratedGenre(newGenre)
+    if (generatedGenre != null) {
+      setGeneratedGenre(null);
+      setTimeout(() => {
+        setGeneratedGenre(newGenre);
+      }, 300);
+    } else {
+      setGeneratedGenre(newGenre);
     }
   }
 
   function doTheme() {
     const newTheme = themeList[doRandom(0, themeList.length)];
-    if (generatedTheme != null){
+    if (generatedTheme != null) {
       setGeneratedTheme(null);
-      setTimeout(()=>{setGeneratedTheme(newTheme)},300);
+      setTimeout(() => {
+        setGeneratedTheme(newTheme);
+      }, 300);
+    } else {
+      setGeneratedTheme(newTheme);
     }
-    else{
-    setGeneratedTheme(newTheme);
   }
-}
 
   function doCharacter() {
     const newCharacter = characterList[doRandom(0, characterList.length)];
-    if (generatedCharacter != null){
+    if (generatedCharacter != null) {
       setGeneratedCharacter(null);
-      setTimeout(()=>{setGeneratedCharacter(newCharacter)},300);
+      setTimeout(() => {
+        setGeneratedCharacter(newCharacter);
+      }, 300);
+    } else {
+      setGeneratedCharacter(newCharacter);
     }
-    else{
-    setGeneratedCharacter(newCharacter);
   }
-}
 
   function doWordCount() {
     const newWordCount = wordCounts[doRandom(0, wordCounts.length)];
-    if (generatedWordCount != null){
+    if (generatedWordCount != null) {
       setGeneratedWordCount(null);
-      setTimeout(()=>{setGeneratedWordCount(newWordCount)},300);
+      setTimeout(() => {
+        setGeneratedWordCount(newWordCount);
+      }, 300);
+    } else {
+      setGeneratedWordCount(newWordCount);
     }
-    else{
-    setGeneratedWordCount(newWordCount);
   }
-}
 
   function doRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -68,13 +72,11 @@ function App() {
     <motion.div>
       <div className="container-fluid g-md-5">
         <div className="row navbar">
-        
           <img
             className="bannerImg"
             src={bannerImg2}
             alt="black and white dice"
           ></img>
-          
         </div>
         <div className="headlineText">
           <h2>Random Story-Generating Randomizer for Stories</h2>
@@ -116,126 +118,118 @@ function App() {
           <div className="row">
             <div className="col-md-3">
               <div className="card">
-                  <p onClick={()=>doGenre()} className="headingName card-title">
-                    Genre:</p>
-                    <p className="card-text generatedString">
-                    {generatedGenre && (
-                      <motion.div
-                        key="answer"
-                        initial="collapsed"
-                        animate="open"
-                        exit="collapsed"
-                        variants={{
-                          open: { opacity: 1, height: "auto" },
-                          collapsed: { opacity: 0, height: 0 },
-                        }}
-                        transition={{
-                          duration: 1.2,
-                          ease: [0.04, 0.62, 0.23, 0.98],
-                        }}
-                      >
-                        
-                          {generatedGenre}
-                       
-                      </motion.div>
-                    )}
-                  </p>
-                
+                <p onClick={() => doGenre()} className="headingName card-title">
+                  Genre:
+                </p>
+                <p className="card-text generatedString">
+                  {generatedGenre && (
+                    <motion.div
+                      key="generatedGenre"
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={{
+                        open: { opacity: 1, height: "auto" },
+                        collapsed: { opacity: 0, height: 0 },
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      }}
+                    >
+                      {generatedGenre}
+                    </motion.div>
+                  )}
+                </p>
               </div>
             </div>
             <div className="col-md-3">
               <div className="card">
-                
-                  <p onClick={()=>doTheme()} className="headingName card-title">
-                    Theme:
-                    </p>
-                    <p className="card-text generatedString">
-                    {generatedTheme && (
-                      <motion.div
-                        key="answer"
-                        initial="collapsed"
-                        animate="open"
-                        exit="collapsed"
-                        variants={{
-                          open: { opacity: 1, height: "auto" },
-                          collapsed: { opacity: 0, height: 0 },
-                        }}
-                        transition={{
-                          duration: 1.2,
-                          ease: [0.04, 0.62, 0.23, 0.98],
-                        }}
-                      >
-                        
-                          {generatedTheme}
-                        
-                      </motion.div>
-                    )}
-                  </p>
-                
+                <p onClick={() => doTheme()} className="headingName card-title">
+                  Theme:
+                </p>
+                <p className="card-text generatedString">
+                  {generatedTheme && (
+                    <motion.div
+                      key="generatedTheme"
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={{
+                        open: { opacity: 1, height: "auto" },
+                        collapsed: { opacity: 0, height: 0 },
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      }}
+                    >
+                      {generatedTheme}
+                    </motion.div>
+                  )}
+                </p>
               </div>
             </div>
 
             <div className="col-md-3">
               <div className="card">
-                
-                  <p onClick={()=>doCharacter()} className="card-title headingName">
-                    Character:
-                    </p>
-                    <p className="generatedString">
-                    {generatedCharacter && (
-                      <motion.div
-                        key="answer"
-                        initial="collapsed"
-                        animate="open"
-                        exit="collapsed"
-                        variants={{
-                          open: { opacity: 1, height: "auto" },
-                          collapsed: { opacity: 0, height: 0 },
-                        }}
-                        transition={{
-                          duration: 1.2,
-                          ease: [0.04, 0.62, 0.23, 0.98],
-                        }}
-                      >
-                        
-                          {generatedCharacter}
-                        
-                      </motion.div>
-                    )}
-                  </p>
-                
+                <p
+                  onClick={() => doCharacter()}
+                  className="card-title headingName"
+                >
+                  Character:
+                </p>
+                <p className="generatedString">
+                  {generatedCharacter && (
+                    <motion.div
+                      key="generatedCharacter"
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={{
+                        open: { opacity: 1, height: "auto" },
+                        collapsed: { opacity: 0, height: 0 },
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      }}
+                    >
+                      {generatedCharacter}
+                    </motion.div>
+                  )}
+                </p>
               </div>
             </div>
 
             <div className="col-md-3">
               <div className="card">
-                
-                  <p onClick={()=>doWordCount()} className="card-title headingName">
-                    Word Count:
-                    </p>
-                    <p className="card-text generatedString">
-                    {generatedWordCount && (
-                      <motion.div
-                        key="answer"
-                        initial="collapsed"
-                        animate="open"
-                        exit="collapsed"
-                        variants={{
-                          open: { opacity: 1, height: "auto" },
-                          collapsed: { opacity: 0, height: 0 },
-                        }}
-                        transition={{
-                          duration: 1.2,
-                          ease: [0.04, 0.62, 0.23, 0.98],
-                        }}
-                      >
-                        
-                          {generatedWordCount}
-                       
-                      </motion.div>
-                    )}
-                  </p>
-                
+                <p
+                  onClick={() => doWordCount()}
+                  className="card-title headingName"
+                >
+                  Word Count:
+                </p>
+                <p className="card-text generatedString">
+                  {generatedWordCount && (
+                    <motion.div
+                      key="generatedWordCount"
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={{
+                        open: { opacity: 1, height: "auto" },
+                        collapsed: { opacity: 0, height: 0 },
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      }}
+                    >
+                      {generatedWordCount}
+                    </motion.div>
+                  )}
+                </p>
               </div>
             </div>
           </div>
