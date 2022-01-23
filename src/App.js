@@ -6,18 +6,18 @@ import { themeList } from "./themes";
 import { characterList } from "./characters";
 import { wordCounts } from "./wordcounts";
 import { Button } from "react-bootstrap";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import bannerImg2 from "./diceV3Banner2.jpg";
 
 import { motion, AnimatePresence } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.css";
 
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
-   integrity="sha512-MY2jfK3DBnVzdS2V8MXo5lRtr0mNRroUI9hoLVv2/yL3vrJTam3VzASuKQ96fLEpyYIT4a8o7YgtUs5lPjiLVQ=="
-   crossorigin="anonymous"
-   referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
+  integrity="sha512-MY2jfK3DBnVzdS2V8MXo5lRtr0mNRroUI9hoLVv2/yL3vrJTam3VzASuKQ96fLEpyYIT4a8o7YgtUs5lPjiLVQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>;
 
 function App() {
   const [generatedGenre, setGeneratedGenre] = useState(null);
@@ -29,11 +29,25 @@ function App() {
   const ref = useRef();
 
   const ComponentToPrint = forwardRef((props, ref) => {
-    return <div ref={ref}><p className="headingName">Genre: <span className="modalString">{generatedGenre}</span></p>
-    <p className="headingName">Theme: <span className="modalString">{generatedTheme}</span></p>
-    <p className="headingName">Character: <span className="modalString">{generatedCharacter}</span></p>
-    <p className="headingName">Word Count: <span className="modalString">{generatedWordCount}</span></p>
-    <p className="headingName">Time Limit: <span className="modalString">{generatedTimeLimit}</span></p></div>;
+    return (
+      <div style={{textAlign:"center"}} ref={ref}>
+        <p className="headingName">
+          Genre: <span className="modalString">{generatedGenre}</span>
+        </p>
+        <p className="headingName">
+          Theme: <span className="modalString">{generatedTheme}</span>
+        </p>
+        <p className="headingName">
+          Character: <span className="modalString">{generatedCharacter}</span>
+        </p>
+        <p className="headingName">
+          Word Count: <span className="modalString">{generatedWordCount}</span>
+        </p>
+        <p className="headingName">
+          Time Limit: <span className="modalString">{generatedTimeLimit}</span>
+        </p>
+      </div>
+    );
   });
 
   function doGenre() {
@@ -82,30 +96,30 @@ function App() {
     } else {
       setGeneratedWordCount(newWordCount);
     }
-    switch (newWordCount){
-      case '100':
+    switch (newWordCount) {
+      case "100":
         setGeneratedTimeLimit("24 Hours");
         break;
-      case '250':
+      case "250":
         setGeneratedTimeLimit("24 Hours");
         break;
-      case '500':
+      case "500":
         setGeneratedTimeLimit("48 Hours");
         break;
-      case '1000':
+      case "1000":
         setGeneratedTimeLimit("4 Days");
         break;
-      case '2500':
-          setGeneratedTimeLimit("8 Days");
-          break;
-      case '5000':
-            setGeneratedTimeLimit("2 Weeks");
-            break;
-      case '10,000':
+      case "2500":
+        setGeneratedTimeLimit("8 Days");
+        break;
+      case "5000":
+        setGeneratedTimeLimit("2 Weeks");
+        break;
+      case "10,000":
         setGeneratedTimeLimit("1 Month");
         break;
-        default:
-          setGeneratedTimeLimit(null);
+      default:
+        setGeneratedTimeLimit(null);
     }
   }
 
@@ -115,19 +129,22 @@ function App() {
 
   const modalStyle = {
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      textAlign: 'center',
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      textAlign: "center",
+      borderWidth: 10,
+      borderStyle: "solid",
+      borderColor: "#4D7BD1",
+      borderRadius: 10,
     },
   };
 
   return (
     <motion.div>
-      
       <div className="container-fluid g-md-5">
         <div className="row navbar">
           <img
@@ -139,7 +156,7 @@ function App() {
         <div className="headlineText">
           <h2>Random Story-Generating Randomizer for Stories</h2>
         </div>
-        
+
         <div className="row buttonRow">
           <p>
             <Button onClick={() => doGenre()}>Genre</Button>
@@ -323,41 +340,46 @@ function App() {
                 </p>
               </div>
             </div>
-
-
-
-
           </div>
         </AnimatePresence>
         <div className="modalDiv">
-        
-        <Modal
-        style={modalStyle}
-        isOpen={modalVisible}
-        isClosed={!modalVisible}>
-          <div>
-          <ComponentToPrint ref={ref} />
-      <ReactToPrint content={() => ref.current}>
-        <PrintContextConsumer>
-          {({ handlePrint }) => (
-            <Button onClick={handlePrint}>Print</Button>
-          )}
-        </PrintContextConsumer>
-      </ReactToPrint>
-      
-    </div>
-    {/* <p className="headingName">Genre: <span className="modalString">{generatedGenre}</span></p>
+          <Modal
+            style={modalStyle}
+            isOpen={modalVisible}
+            isClosed={!modalVisible}
+          >
+            <div>
+              <ComponentToPrint ref={ref} />
+              <ReactToPrint content={() => ref.current}>
+                <PrintContextConsumer>
+                  {({ handlePrint }) => (
+                    <Button onClick={handlePrint}>Print</Button>
+                  )}
+                </PrintContextConsumer>
+              </ReactToPrint>
+            </div>
+            {/* <p className="headingName">Genre: <span className="modalString">{generatedGenre}</span></p>
     <p className="headingName">Theme: <span className="modalString">{generatedTheme}</span></p>
     <p className="headingName">Character: <span className="modalString">{generatedCharacter}</span></p>
     <p className="headingName">Word Count: <span className="modalString">{generatedWordCount}</span></p> */}
-    <Button onClick={()=>{setModalVisible(false)}}>Close</Button>
-      </Modal>
-      </div>
-      <br/>
-        {generatedGenre || generatedTheme || generatedCharacter || generatedWordCount ? 
-        <Button onClick={()=>setModalVisible(!modalVisible)}>Print Recipe</Button>
-        :
-        null}
+            <Button
+              onClick={() => {
+                setModalVisible(false);
+              }}
+            >
+              Close
+            </Button>
+          </Modal>
+        </div>
+        <br />
+        {generatedGenre ||
+        generatedTheme ||
+        generatedCharacter ||
+        generatedWordCount ? (
+          <Button onClick={() => setModalVisible(!modalVisible)}>
+            Print Recipe
+          </Button>
+        ) : null}
         <br />
         <br />
         <div className="row creditsRow justify-content-center">
@@ -381,7 +403,6 @@ function App() {
           </p>
         </div>
       </div>
-      
     </motion.div>
   );
 }
