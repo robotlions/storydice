@@ -44,9 +44,7 @@ Button{
 .creditsRow{
   font-size: x-small;
   color: gray;
-  position: absolute;
   opacity: 0.4;
-  width: 100%;
 }
 
 h2{
@@ -71,6 +69,12 @@ h2{
   font-family: 'Gotham Light', sans-serif;
   font-weight: bold;
   font-size: large;
+}
+
+.modalString{
+  font-family: "Gotham Light", sans-serif;
+  font-weight: bold;
+  font-size: medium;
 }
 
 
