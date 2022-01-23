@@ -145,7 +145,7 @@ function App() {
 
   return (
     <motion.div>
-      <div className="container-fluid g-md-5">
+      <div className="container-fluid g-lg-5">
         <div className="row navbar">
           <img
             className="bannerImg"
@@ -192,8 +192,8 @@ function App() {
         </div>
         <br />
         <AnimatePresence>
-          <div className="row">
-            <div className="col-md-3">
+          <div className="row justify-content-center">
+            <div className="col-lg-auto">
               <div className="card">
                 <p onClick={() => doGenre()} className="headingName card-title">
                   Genre:
@@ -220,7 +220,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-lg-auto">
               <div className="card">
                 <p onClick={() => doTheme()} className="headingName card-title">
                   Theme:
@@ -248,7 +248,7 @@ function App() {
               </div>
             </div>
 
-            <div className="col-md-3">
+            <div className="col-lg-auto">
               <div className="card">
                 <p
                   onClick={() => doCharacter()}
@@ -279,7 +279,7 @@ function App() {
               </div>
             </div>
 
-            <div className="col-md-auto">
+            <div className="col-lg-auto">
               <div className="card">
                 <p
                   onClick={() => doWordCount()}
@@ -310,7 +310,7 @@ function App() {
               </div>
             </div>
 
-            <div className="col-md-auto">
+            <div className="col-lg-auto">
               <div className="card">
                 <p
                   onClick={() => doWordCount()}

@@ -69,6 +69,8 @@ h2{
   font-family: 'Gotham Light', sans-serif;
   font-weight: bold;
   font-size: large;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .modalString{
@@ -97,14 +99,27 @@ h2{
   src: url('../src/fonts/GothamPro-Black.woff');
 }
 @media (min-width: 775px){
-  .card{
+  /* .card{
     min-height: 250px;
-  }
+  } */
   .generatedString{
     margin-top: 30px;
-    font-size: x-large;
+    font-size: large;
   }
   .headlineText{
     animation: slideIn 2s;
+  }
+}
+@media (min-width: 700px) and (orientation: landscape)
+{
+  .card{
+max-height: 50px;
+  }
+}
+
+@media( min-width: 990px ){
+  .card{
+    min-height: 250px;
+    min-width: 200px !important;
   }
 }
