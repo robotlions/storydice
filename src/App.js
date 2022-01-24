@@ -31,6 +31,9 @@ function App() {
   const ComponentToPrint = forwardRef((props, ref) => {
     return (
       <div style={{textAlign:"center"}} ref={ref}>
+        <h5>Story Dice</h5>
+        <h5>Random Fiction Recipe</h5>
+        <br/>
         <p className="headingName">
           Genre: <span className="modalString">{generatedGenre}</span>
         </p>
@@ -350,7 +353,7 @@ function App() {
           >
             <div>
               <ComponentToPrint ref={ref} />
-              <ReactToPrint content={() => ref.current}>
+              <ReactToPrint bodyClass="pdfWindow" content={() => ref.current}>
                 <PrintContextConsumer>
                   {({ handlePrint }) => (
                     <Button onClick={handlePrint}>Print</Button>

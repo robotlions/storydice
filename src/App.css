@@ -51,6 +51,10 @@ h2{
   font-family: 'Gotham Black';
 }
 
+h5{
+  font-family: "Gotham Black";
+}
+
 .headerBlock{
 }
 
@@ -77,6 +81,27 @@ h2{
   font-family: "Gotham Light", sans-serif;
   font-weight: bold;
   font-size: medium;
+}
+
+.pdfWindow{
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 500px;
+  height: 700px;
+  border: 2px solid darkgray;
+  margin-top: 100px;
+}
+
+.pdfWindow span{
+  font-size: 30px;
+}
+
+.pdfWindow p{
+  font-size: 30px;
+}
+
+.pdfWindow h5{
+  font-size: 35px;
 }
 
 
